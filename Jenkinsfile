@@ -1,6 +1,7 @@
 pipeline{
-    agent{
-      label 'master'
+    agent any
+        tools {
+        maven 'Maven_3.6.0' 
     }
     stages{
         stage('Compile stage'){
