@@ -10,7 +10,8 @@ pipeline{
         stage ('Mvn Stage') {
 
             steps {
-               bat '''set PATH=%PATH%;C:\\Maven\\apache-maven-3.6.0\\bin'''
+               set PATH=%PATH%;C:\\Maven\\apache-maven-3.6.0\\bin
+               set PATH=%PATH#;C:\\Windows\\system32 
             }
         }
         stage ('Compile Stage') {
