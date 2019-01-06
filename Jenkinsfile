@@ -1,6 +1,10 @@
 pipeline{
 
     agent any
+    environment {
+        application = 'mot'
+        applicationType    = 'external'
+    }
 
     stages {
         stage ('Mvn Stage') {
