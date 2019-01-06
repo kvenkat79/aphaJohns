@@ -3,7 +3,12 @@ pipeline{
     agent any
 
     stages {
+        stage ('Mvn Stage') {
 
+            steps {
+               bat '''set PATH=%PATH%;C:\\Maven\\apache-maven-3.6.0\\bin'''
+            }
+        }
         stage ('Compile Stage') {
 
             steps {
